@@ -101,6 +101,6 @@ test_generator = test_datagen.flow_from_directory(
 test_loss, test_acc = model.evaluate(test_generator)
 logger.info(f"测试准确率: {test_acc}")
 
-model.save("dog_breed_classifier.h5")
+model.save("assets/dog_breed_classifier.h5")
 
 time.sleep(0x3)

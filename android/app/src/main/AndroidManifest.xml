@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="wangzhongzhi"
-        android:name="${applicationName}"
+        android:label="汪种知"
+        android:name="汪种知"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
