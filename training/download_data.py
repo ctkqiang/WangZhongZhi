@@ -76,11 +76,11 @@ def read_breeds(file_path: str) -> list:
         return []
 
 
-def main():
+def main(listpath):
+    logger.info("开始下载狗狗图片...")
+    logger.info(listpath)
 
-    # TODO: 可以将文件路径改为 "breed_en.txt" 以下载英文品种的狗狗图片
-    # 当前使用中文品种名称文件
-    breed_file = os.path.join(os.path.dirname(__file__), "data", "breed_zh.txt")
+    breed_file = os.path.join(os.path.dirname(__file__), "data", listpath)
 
     breeds = read_breeds(breed_file)
 
@@ -126,4 +126,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # TODO: 可以将文件路径改为 "breed_en.txt" 以下载英文品种的狗狗图片
+    main(listpath="breed_en.txt")
