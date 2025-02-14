@@ -59,6 +59,7 @@ def download_images(
             自定义文件名解析器
             用于生成格式化的图片文件名
             """
+
             def __init__(self, name):
                 self.count = 1
                 self.name = name
@@ -173,4 +174,4 @@ def main(listpath):
 
 if __name__ == "__main__":
     # 默认使用英文品种文件，也可以改为使用中文品种文件
-    main(listpath="breed_en.txt")
+    main(listpath="breed_zh.txt")
