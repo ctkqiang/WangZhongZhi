@@ -1,0 +1,30 @@
+Labrador Retriever
+German Shepherd
+Golden Retriever
+French Bulldog
+Bulldog
+Poodle
+Beagle
+Rottweiler
+Dachshund
+Yorkshire Terrier
+Boxer
+Pomeranian
+Chihuahua
+Siberian Husky
+Great Dane
+Doberman Pinscher
+Shih Tzu
+Border Collie
+Cocker Spaniel
+Australian Shepherd
+Bernese Mountain Dog
+Pug
+Corgi
+Saint Bernard
+Chow Chow
+Alaskan Malamute
+Bull Terrier
+Dalmatian
+Shetland Sheepdog
+Newfoundland
