@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WangZhongZhi.iml" filepath="$PROJECT_DIR$/.idea/modules/WangZhongZhi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WangZhongZhi.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WangZhongZhi.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WangZhongZhi.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WangZhongZhi.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WangZhongZhi.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WangZhongZhi.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WangZhongZhi.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WangZhongZhi.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wangzhongzhi.iml" filepath="$PROJECT_DIR$/wangzhongzhi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/wangzhongzhi_android.iml" filepath="$PROJECT_DIR$/android/wangzhongzhi_android.iml" />
     </modules>
   </component>
 </project>

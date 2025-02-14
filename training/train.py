@@ -1,12 +1,12 @@
 import time
 import tensorflow as tf
-from logger_config import setup_logger
+import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from logger_config import setup_logger
 
 logger = setup_logger(__name__)
-
 
 # ImageDataGenerator 是一个用于生成批量图像数据的工具类。
 # 对于训练数据，我们进行一些数据增强操作，以增加数据的多样性，提高模型的泛化能力。
@@ -27,12 +27,18 @@ test_datagen = ImageDataGenerator(rescale=1.0 / 255)
 # batch_size=32 表示每次从数据集中取出 32 张图像作为一个批次进行训练。
 # class_mode='categorical' 表示使用分类模式，即每个图像对应一个类别标签，标签采用 one - hot 编码。
 train_generator = train_datagen.flow_from_directory(
-    "images/train", target_size=(150, 150), batch_size=32, class_mode="categorical"
+    "training/images/train",
+    target_size=(150, 150),
+    batch_size=32,
+    class_mode="categorical",
 )
 
 # 同样的方法用于生成验证数据生成器。
 validation_generator = test_datagen.flow_from_directory(
-    "images/validation", target_size=(150, 150), batch_size=32, class_mode="categorical"
+    "training/images/validation",
+    target_size=(150, 150),
+    batch_size=32,
+    class_mode="categorical",
 )
 
 # Sequential 是 Keras 中用于构建顺序模型的类，顺序模型是一种简单的线性堆叠模型，即一层接着一层地堆叠网络层。
@@ -85,54 +91,16 @@ history = model.fit(
     epochs=10,
 )
 
-# 同样使用 flow_from_directory 方法生成测试数据生成器。
 test_generator = test_datagen.flow_from_directory(
-    "data/test", target_size=(150, 150), batch_size=32, class_mode="categorical"
+    "training/images/test",
+    target_size=(150, 150),
+    batch_size=32,
+    class_mode="categorical",
 )
 
-# evaluate 方法用于评估模型在测试数据上的性能。
-# test_loss 是测试集上的损失值，test_acc 是测试集上的准确率。
 test_loss, test_acc = model.evaluate(test_generator)
 logger.info(f"测试准确率: {test_acc}")
 
-# save 方法用于将训练好的模型保存为 HDF5 格式的文件，方便后续使用。
 model.save("dog_breed_classifier.h5")
 
 time.sleep(0x3)
-
-# 设置 Streamlit 应用的标题。
-st.title("犬种分类器")
-
-# 加载之前保存的模型。
-model = tf.keras.models.load_model("dog_breed_classifier.h5")
-
-# 获取所有类别的名称。
-# train_generator.class_indices 是一个字典，键为类别名称，值为对应的索引。
-# 通过 list() 函数将字典的键转换为列表，方便后续使用。
-class_names = list(train_generator.class_indices.keys())
-
-# 创建一个文件上传器，允许用户上传 JPG、JPEG 或 PNG 格式的图像文件。
-uploaded_file = st.file_uploader("选择一张图片...", type=["jpg", "jpeg", "png"])
-
-# 如果用户上传了文件，则进行以下操作。
-if uploaded_file is not None:
-    # 使用 load_img 函数加载上传的图像，并将其调整为 150x150 像素的大小。
-    img = tf.keras.preprocessing.image.load_img(uploaded_file, target_size=(150, 150))
-    # 将图像转换为 NumPy 数组。
-    img = tf.keras.preprocessing.image.img_to_array(img)
-    # 在数组的第一个维度上增加一个维度，以满足模型输入的要求（模型输入通常要求是一个批次的数据，即使只有一张图像）。
-    img = np.expand_dims(img, axis=0)
-    # 对图像的像素值进行归一化操作。
-    img = img / 255.0
-
-    # 使用模型对图像进行预测，得到每个类别的概率。
-    predictions = model.predict(img)
-    # 使用 argmax 函数找到概率最大的类别对应的索引。
-    predicted_class = np.argmax(predictions)
-    # 根据索引从 class_names 列表中获取对应的犬种名称。
-    breed = class_names[predicted_class]
-
-    # 在 Streamlit 应用中显示上传的图像。
-    st.image(uploaded_file, caption="上传的图像.", use_column_width=True)
-    # 在 Streamlit 应用中显示预测的犬种名称。
-    st.write(f"预测的犬种: {breed}")
