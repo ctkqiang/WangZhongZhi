@@ -5,6 +5,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from logger_config import setup_logger
+import json
 
 logger = setup_logger(__name__)
 
@@ -22,7 +23,7 @@ train_datagen = ImageDataGenerator(
 test_datagen = ImageDataGenerator(rescale=1.0 / 255)
 
 # flow_from_directory 方法用于从指定的目录中读取图像数据，并将其转换为适合模型输入的格式。
-# 'data/train' 是训练数据所在的目录。
+# 'training/images/train' 是训练数据所在的目录。
 # target_size=(150, 150) 表示将所有图像的大小调整为 150x150 像素。
 # batch_size=32 表示每次从数据集中取出 32 张图像作为一个批次进行训练。
 # class_mode='categorical' 表示使用分类模式，即每个图像对应一个类别标签，标签采用 one - hot 编码。
@@ -101,6 +102,13 @@ test_generator = test_datagen.flow_from_directory(
 test_loss, test_acc = model.evaluate(test_generator)
 logger.info(f"测试准确率: {test_acc}")
 
-model.save("assets/dog_breed_classifier.h5")
+model.save("dog_breed_classifier.h5")
+
+# 获取犬种名称到类别编号的映射
+breed_to_class = train_generator.class_indices
+
+# 将映射保存到 JSON 文件中
+with open("breed_class_mapping.json", "w", encoding="utf - 8") as f:
+    json.dump(breed_to_class, f, ensure_ascii=False, indent=4)
 
 time.sleep(0x3)
