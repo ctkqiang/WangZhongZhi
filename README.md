@@ -437,11 +437,11 @@ $$L_{total} = L + \frac{\lambda}{2}\|\theta\|^2$$
 <div align="center">
   <div style="display: flex; justify-content: center; gap: 20px;">
     <div>
-      <img src="assets/WechatIMG33.jpg" alt="识别界面" width="300" />
+      <img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG32.jpg?raw=true" alt="识别界面" width="300" />
       <p><strong>实时识别界面</strong></p>
     </div>
     <div>
-      <img src="assets/WechatIMG34.jpg" alt="结果展示" width="300" />
+      <img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG33.jpg?raw=true" alt="结果展示" width="300" />
       <p><strong>识别结果展示</strong></p>
     </div>
   </div>
