@@ -438,12 +438,12 @@ $$L_{total} = L + \frac{\lambda}{2}\|\theta\|^2$$
 <table>
 <tr>
 <td align="center" width="400">
-<img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG32.jpg?raw=true" width="350" />
+<img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG33.jpg?raw=true" width="350" />
 <br />
 <strong>实时识别界面</strong>
 </td>
 <td align="center" width="400">
-<img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG33.jpg?raw=true" width="350" />
+<img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG32.jpg?raw=true" width="350" />
 <br />
 <strong>识别结果展示</strong>
 </td>
