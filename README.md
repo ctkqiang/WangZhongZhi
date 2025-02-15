@@ -434,16 +434,14 @@ $$L_{total} = L + \frac{\lambda}{2}\|\theta\|^2$$
 
 ### 📱 应用演示
 
-<div align="center">
-  <div style="display: flex; justify-content: center; gap: 20px;">
-    <div>
-      <img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG32.jpg?raw=true" alt="识别界面" width="300" />
-      <p><strong>实时识别界面</strong></p>
-    </div>
-    <div>
-      <img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG33.jpg?raw=true" alt="结果展示" width="300" />
-      <p><strong>识别结果展示</strong></p>
-    </div>
+<div align="center" style="display: flex; justify-content: space-between; max-width: 800px; margin: 0 auto;">
+  <div style="flex: 1; text-align: center; padding: 10px;">
+    <img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG32.jpg?raw=true" alt="识别界面" width="300" />
+    <p><strong>实时识别界面</strong></p>
+  </div>
+  <div style="flex: 1; text-align: center; padding: 10px;">
+    <img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG33.jpg?raw=true" alt="结果展示" width="300" />
+    <p><strong>识别结果展示</strong></p>
   </div>
 </div>
 
