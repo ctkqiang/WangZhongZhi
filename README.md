@@ -434,19 +434,24 @@ $$L_{total} = L + \frac{\lambda}{2}\|\theta\|^2$$
 
 ### 📱 应用演示
 
-<div align="center" style="display: flex; justify-content: space-between; max-width: 800px; margin: 0 auto;">
-  <div style="flex: 1; text-align: center; padding: 10px;">
-    <img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG32.jpg?raw=true" alt="识别界面" width="300" />
-    <p><strong>实时识别界面</strong></p>
-  </div>
-  <div style="flex: 1; text-align: center; padding: 10px;">
-    <img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG33.jpg?raw=true" alt="结果展示" width="300" />
-    <p><strong>识别结果展示</strong></p>
-  </div>
+<div align="center">
+<table>
+<tr>
+<td align="center" width="400">
+<img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG32.jpg?raw=true" width="350" />
+<br />
+<strong>实时识别界面</strong>
+</td>
+<td align="center" width="400">
+<img src="https://github.com/ctkqiang/WangZhongZhi/blob/main/assets/images/WechatIMG33.jpg?raw=true" width="350" />
+<br />
+<strong>识别结果展示</strong>
+</td>
+</tr>
+</table>
 </div>
 
 主要功能展示：
-
 - 左图：实时摄像头预览和拍照识别界面
 - 右图：识别结果分析和详细信息展示
   - 犬种概率分布饼图
