@@ -432,6 +432,30 @@ $$L_{total} = L + \frac{\lambda}{2}\|\theta\|^2$$
    - $c_{in}^{(l)}$ = 输入通道数
    - $c_{out}^{(l)}$ = 输出
 
+### 📱 应用演示
+
+<div align="center">
+  <div style="display: flex; justify-content: center; gap: 20px;">
+    <div>
+      <img src="assets/WechatIMG33.jpg" alt="识别界面" width="300" />
+      <p><strong>实时识别界面</strong></p>
+    </div>
+    <div>
+      <img src="assets/WechatIMG34.jpg" alt="结果展示" width="300" />
+      <p><strong>识别结果展示</strong></p>
+    </div>
+  </div>
+</div>
+
+主要功能展示：
+
+- 左图：实时摄像头预览和拍照识别界面
+- 右图：识别结果分析和详细信息展示
+  - 犬种概率分布饼图
+  - 详细品种特征说明
+  - 饲养建议和注意事项
+
+
 ## 许可证
 
 本项目采用 **木兰宽松许可证 (Mulan PSL)** 进行许可。  
