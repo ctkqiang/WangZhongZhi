@@ -482,16 +482,26 @@ $$L_{total} = L + \frac{\lambda}{2}\|\theta\|^2$$
 
 ### 🌐 全球捐赠通道
 
-#### 中国大陆用户
+#### 国内用户
 
 <div align="center" style="margin: 40px 0">
 
-🟢 微信支付  
-![微信捐赠码](https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true=200x200)
-
-🔵 支付宝  
-![支付宝捐赠码](https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true=200x200)
-
+<div align="center">
+<table>
+<tr>
+<td align="center" width="300">
+<img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" width="200" />
+<br />
+<strong>🔵 支付宝</strong>
+</td>
+<td align="center" width="300">
+<img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" width="200" />
+<br />
+<strong>🟢 微信支付</strong>
+</td>
+</tr>
+</table>
+</div>
 </div>
 
 #### 国际用户
